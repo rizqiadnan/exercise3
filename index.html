@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rizqi Adnan</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h2>Hacktiv8 x DevC - Day 3 Filtering Table</h2>
+    <p> Silahkan cari berdasarkan Nama, rotation-periode,..etc</p>
+    <input id="myInput" type="text" placeholder="Cari....">
+    <br><br>
+
+    <table>
+        <thead>
+            <tr>
+                <td>No</td>
+                <td>Name</td>
+                <td>rotation_period</td>
+                <td>orbital_period</td>
+                <td>diameter</td>
+                <td>climate</td>
+                <td>gravity</td>
+                <td>terrain</td>
+                <td>surface_water</td>
+                <td>population</td>
+            </tr>
+        </thead>
+        <tbody id="myTable">
+            <tr>
+                <td>1</td>
+                <td>Alderaan</td>
+                <td>24</td>
+                <td>364</td>
+                <td>12500</td>
+                <td>temperate</td>
+                <td>1 standard</td>
+                <td>grasslands, mountains</td>
+                <td>40</td>
+                <td>2000000000</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Yavin IV</td>
+                <td>23</td>
+                <td>4818</td>
+                <td>10200</td>
+                <td>temperate, tropical</td>
+                <td>1 standard</td>
+                <td>jungle, rainforests</td>
+                <td>8</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Hoth</td>
+                <td>22</td>
+                <td>549</td>
+                <td>7200</td>
+                <td>frozen</td>
+                <td>1.1 standard</td>
+                <td>tundra, ice caves, mountain ranges</td>
+                <td>100</td>
+                <td>unknown</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Dagobah</td>
+                <td>21</td>
+                <td>341</td>
+                <td>8900</td>
+                <td>murky</td>
+                <td>N/A</td>
+                <td>swamp, jungles</td>
+                <td>8</td>
+                <td>unknown</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

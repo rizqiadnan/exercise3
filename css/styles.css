@@ -1,0 +1,19 @@
+table,
+tr,
+td {
+    border: 1px solid black;
+    border-spacing: 0px;
+}
+
+thead {
+    background: 
+}
+
+td,
+th {
+    padding: 25px;
+}
+
+tbody tr:nth-child(even) {
+    background: lightgray
+}
